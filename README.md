@@ -49,7 +49,7 @@ in Board.java
         board0_.bno=?
 ```    
 <br>
-그렇지만 게시판 리스트를 조회할때 일일이 댓글리스트까지 join하여 가져오는 것 또한 비효율적이며(추후에 더 많은 관계매핑이 들어갔을때를 생각하면 더 비효율적) 필요에 따라 지연로딩과 즉시로딩을 적당히 사용할 수 있게끔 BoardRepository에 QueryDsl을 이용하여 boardWithReply메서드를 만들어 주었다. 
+그렇지만 게시판 리스트를 조회할때 일일이 댓글리스트까지 join하여 가져오는 것 또한 비효율적이며(추후에 더 많은 관계매핑이 들어갔을때를 생각하면 더 비효율적) 필요에 따라 지연로딩과 즉시로딩을 적당히 사용할 수 있게끔 BoardRepository에 QueryDsl을 이용하여 boardWithReply메서드를 만들어 주었다. <br>
 <br>
 
 ```java
