@@ -19,6 +19,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 /**
@@ -29,6 +30,7 @@ import lombok.ToString;
 @Builder
 @Getter
 @AllArgsConstructor
+@NoArgsConstructor
 @ToString
 public class Board {
     
@@ -46,9 +48,5 @@ public class Board {
     @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "bno")
     private List<Reply> replies;
-
-    public Board() {
-      
-    } 
     
 }

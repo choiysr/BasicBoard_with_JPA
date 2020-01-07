@@ -10,8 +10,7 @@ import org.springframework.data.jpa.repository.Query;
  * BoardRepository
  */
 public interface BoardRepository extends JpaRepository<Board,Integer>{
-
     @EntityGraph(attributePaths={"replies"})
     @Query("select b from Board b where b.bno = :bno")
-    public Board boardToReply(Integer bno);
+    public Board boardWithReply(Integer bno);
 }

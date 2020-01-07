@@ -49,12 +49,18 @@ public class BoardTests {
     @Test
     @Transactional
     void getOneBoardWithReplyTest() {
-        // Board board = brepo.getOne(1);
-        Board board2 = brepo.boardToReply(1);
-        System.out.println("===================");
-        System.out.println(board2.getReplies());
-        System.out.println("===================");
-        // brepo.boardToReply(1);
+        System.out.println("boardWithReply사용");
+        Board board = brepo.boardWithReply(1);
+        System.out.println(board.getReplies());
+    }
+
+    @Test
+    @Transactional
+    void getOneBoardWithReplyTest2() {
+        System.out.println("findById사용");
+        Board board = brepo.findById(1).orElse(null);
+        System.out.println("List가져오기");
+        System.out.println(board.getReplies()); 
     }
 
 }
